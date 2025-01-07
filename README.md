@@ -1,7 +1,8 @@
-```markdown
 # Bookshelf API 📚
 
 Bookshelf API adalah aplikasi backend sederhana berbasis Node.js yang menyediakan layanan CRUD untuk mengelola koleksi buku. Aplikasi ini dibangun menggunakan framework **Hapi.js**, bertujuan untuk menyimpan, membaca, memperbarui, dan menghapus data buku.
+
+---
 
 ## Fitur 🛠️
 
@@ -11,13 +12,17 @@ Bookshelf API adalah aplikasi backend sederhana berbasis Node.js yang menyediaka
 - **Memperbarui Buku**: Perbarui informasi buku yang ada.
 - **Menghapus Buku**: Hapus buku dari koleksi.
 
+---
+
 ## Cara Kerja 🚀
 
 - Aplikasi menggunakan `@hapi/hapi` untuk membangun server dan menangani routing.
 - Data buku disimpan dalam memori menggunakan array JavaScript sederhana.
 - Setiap buku diidentifikasi dengan ID unik yang dihasilkan oleh library `nanoid`.
 
-## Struktur Folder 🗂️
+---
+
+## Struktur Folder 💂🏻‍♂️
 
 ```
 bookshelf-api/
@@ -35,34 +40,38 @@ bookshelf-api/
 - **`routes/books.js`**: Berisi semua endpoint CRUD untuk buku.
 - **`server.js`**: Mengatur server Hapi.js dan menghubungkan endpoint yang ada.
 
+---
+
 ## Instalasi dan Menjalankan Server 🖥️
 
-1. **Clone Repository**:
+1. **Clone Repository:**
    ```bash
    git clone https://github.com/rayyandzaki/bookshelf-api.git
    cd bookshelf-api
    ```
 
-2. **Install Dependensi**:
+2. **Install Dependensi:**
    Pastikan Anda telah menginstal **Node.js** di komputer Anda.
    ```bash
    npm install
    ```
 
-3. **Menjalankan Server**:
+3. **Menjalankan Server:**
    Jalankan perintah berikut untuk memulai server:
    ```bash
    node src/server.js
    ```
 
-4. **Akses API**:
+4. **Akses API:**
    Server akan berjalan di `http://localhost:9000`.
+
+---
 
 ## Endpoint API 📖
 
-### 1. **Menambahkan Buku**  
+### 1. **Menambahkan Buku**
    **Endpoint**: `POST /books`  
-   **Payload**:  
+   **Payload:**
    ```json
    {
      "name": "Buku A",
@@ -75,7 +84,7 @@ bookshelf-api/
      "reading": true
    }
    ```
-   **Response**:  
+   **Response:**
    ```json
    {
      "status": "success",
@@ -86,9 +95,9 @@ bookshelf-api/
    }
    ```
 
-### 2. **Melihat Daftar Buku**  
+### 2. **Melihat Daftar Buku**
    **Endpoint**: `GET /books`  
-   **Response**:  
+   **Response:**
    ```json
    {
      "status": "success",
@@ -104,9 +113,9 @@ bookshelf-api/
    }
    ```
 
-### 3. **Melihat Detail Buku**  
+### 3. **Melihat Detail Buku**
    **Endpoint**: `GET /books/{bookId}`  
-   **Response (Berhasil)**:  
+   **Response (Berhasil):**
    ```json
    {
      "status": "success",
@@ -129,10 +138,10 @@ bookshelf-api/
    }
    ```
 
-### 4. **Memperbarui Buku**  
+### 4. **Memperbarui Buku**
    **Endpoint**: `PUT /books/{bookId}`  
    **Payload**: Sama seperti `POST /books`.  
-   **Response (Berhasil)**:  
+   **Response (Berhasil):**
    ```json
    {
      "status": "success",
@@ -140,15 +149,17 @@ bookshelf-api/
    }
    ```
 
-### 5. **Menghapus Buku**  
+### 5. **Menghapus Buku**
    **Endpoint**: `DELETE /books/{bookId}`  
-   **Response (Berhasil)**:  
+   **Response (Berhasil):**
    ```json
    {
      "status": "success",
      "message": "Buku berhasil dihapus"
    }
    ```
+
+---
 
 ## Implementasi Lanjutan 🌟
 
@@ -159,7 +170,8 @@ Berikut adalah beberapa ide untuk pengembangan lebih lanjut:
 3. **Deployment**: Deploy API ke layanan cloud seperti Heroku atau AWS.
 4. **Dokumentasi API**: Gunakan Swagger untuk membuat dokumentasi interaktif.
 
+---
+
 ## Lisensi 📜
 
 Proyek ini bersifat open-source. Silakan gunakan dan modifikasi sesuai kebutuhan.
-```
